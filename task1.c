@@ -7,23 +7,17 @@ int main()
 {
     setlocale(LC_ALL, "chcp 65001");
 
-    time_t start, end;
-    int num1, num2, num3, siz = sizeof(int), timelim = 30;
+    float num1 , num2;
 
-    start = time(NULL);
-
-    printf("Размер чисел типа int: %d байт или %d бит\n", siz, 8*siz);
-    printf("Они могут представлять (хранить) значения от %d до %d\n", (int)(pow(-2, 8.*siz - 1)), (int)(pow(2,8.*siz-1)-1));
 
     printf("\nПривет, я Весёлый калькулятор! Давай играть?\n");
-    end = time(NULL);
     printf("Введи два числа, с которыми нужно произвести алгебраические операции:");
-    scanf_s("%d%d", &num1, &num2);
+    scanf_s("%f%f", &num1, &num2);
     
-    printf("сумма равна: %d + %d = %d\n", num1, num2, num1 + num2 );
-    printf("разность равна: %d - %d = %d\n", num1, num2, num1 - num2);
-    printf("произведение равно: %d * %d = %d\n", num1, num2, num1 * num2);
-    printf("частное равно: %d / %d = %d\n", num1, num2, num1 / num2);
+    printf("сумма равна: %f + %f = %.3f\n", num1, num2, num1 + num2 );
+    printf("разность равна: %f - %f = %.3f\n", num1, num2, num1 - num2);
+    printf("произведение равно: %f * %.3f = %.3f\n", num1, num2, (num1 * num2));
+    printf("частное равно: %f / %f = %.3f\n", num1, num2, (num1 / num2));
 
     
 /*  for ( ; difftime(end, start) < timelim; end = time(NULL)) {
