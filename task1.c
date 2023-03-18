@@ -7,18 +7,18 @@ int main()
 {
     setlocale(LC_ALL, "chcp 65001");
 
-    float num1 , num2;
+    int num1;
 
     printf("\nПривет, я крутой калькулятор! Давай играть?\n");
-    printf("Введи два числа, с которыми нужно произвести алгебраические операции:");
-    scanf_s("%f%f", &num1, &num2);
-    
-    printf("сумма равна: %f + %f = %.3f\n", num1, num2, num1 + num2 );
-    printf("разность равна: %f - %f = %.3f\n", num1, num2, num1 - num2);
-    printf("произведение равно: %f * %.3f = %.3f\n", num1, num2, (num1 * num2));
-    printf("частное равно: %f / %f = %.3f\n", num1, num2, (num1 / num2));
+    printf("Введи число, а я его умножу!:");
+    scanf_s("%d", &num1);
 
-    
+    for (int i = 0; i <= 9; i++ )
+   {
+      printf("%d * %d = %d\n", num1, i, num1 * i );
+      }
+    // коммитить я еще не приноровилась
+
 /*  for ( ; difftime(end, start) < timelim; end = time(NULL)) {
         printf("Есть что добавить?\n");
          if (scanf_s("%d", &num2) < 1) {
