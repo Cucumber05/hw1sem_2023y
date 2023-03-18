@@ -5,7 +5,7 @@
 
 int main()
 {
-    setlocale(LC_ALL, "chp 65001");
+    setlocale(LC_ALL, "chcp 65001");
 
     time_t start, end;
     int num1, num2, num3, siz = sizeof(int), timelim = 30;
@@ -17,12 +17,16 @@ int main()
 
     printf("\nПривет, я Весёлый калькулятор! Давай играть?\n");
     end = time(NULL);
-    printf("Введи два числа, которые нужно сложить:");
+    printf("Введи два числа, с которыми нужно произвести алгебраические операции:");
     scanf_s("%d%d", &num1, &num2);
-    num3 = num1 + num2;
-    printf("сумма равна: %d + %d = %d\n", num1, num2, num3);
-    num1 = num3;
-    for ( ; difftime(end, start) < timelim; end = time(NULL)) {
+    
+    printf("сумма равна: %d + %d = %d\n", num1, num2, num1 + num2 );
+    printf("разность равна: %d - %d = %d\n", num1, num2, num1 - num2);
+    printf("произведение равно: %d * %d = %d\n", num1, num2, num1 * num2);
+    printf("частное равно: %d / %d = %d\n", num1, num2, num1 / num2);
+
+    
+/*  for ( ; difftime(end, start) < timelim; end = time(NULL)) {
         printf("Есть что добавить?\n");
          if (scanf_s("%d", &num2) < 1) {
         printf("Учитель Йода говорит: 'Только целый числа нужны нам. Ошибку допустил ты...'\n");
@@ -36,7 +40,7 @@ int main()
     printf("Пока!\n");
     return 0;
 }
-
+*/
 /*
 Упражнение 1.
 1.1. Разберите программу.
