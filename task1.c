@@ -24,7 +24,10 @@ int main()
     num1 = num3;
     for ( ; difftime(end, start) < timelim; end = time(NULL)) {
         printf("Есть что добавить?\n");
-        scanf_s("%d", &num2);
+         if (scanf_s("%d", &num2) < 1) {
+        printf("Учитель Йода говорит: 'Только целый числа нужны нам. Ошибку допустил ты...'\n");
+        return 0;
+     }
         num3 = num1 + num2;
         printf("сумма равна: %d + %d = %d\n", num1, num2, num3);
         num1 = num3;
